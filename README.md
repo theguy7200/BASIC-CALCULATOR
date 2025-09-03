@@ -1,5 +1,4 @@
 # BASIC-CALCULATOR
-Basic calculator using java language.
 
 import java.util.Scanner;
 
