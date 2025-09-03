@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class calc {
     public static void main(String[] args) {
-        System.out.println("CALCULATOR\n1. ADD\n2. SUBTRACT\n3.MULTIPLY\n3. DIVIDE");
+        System.out.println("CALCULATOR\n1. ADD\n2. SUBTRACT\n3. MULTIPLY\n3. DIVIDE");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 1st no: ");
         int a = sc.nextInt();
