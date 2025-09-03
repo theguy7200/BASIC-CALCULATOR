@@ -1,0 +1,91 @@
+# CURRENCY CONVERTOR
+
+import java.util.Scanner;
+
+public class currency {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double usdRate = 0.012;
+        double eurRate = 0.011;
+        double gbpRate = 0.0095;
+        double jpyRate = 1.77;    
+
+        while (true) {
+            System.out.println("\n====== Currency Converter ======");
+            System.out.println("1. Convert INR to USD");
+            System.out.println("2. Convert INR to EUR");
+            System.out.println("3. Convert INR to GBP");
+            System.out.println("4. Convert INR to JPY");
+            System.out.println("5. Convert USD to INR");
+            System.out.println("6. Convert EUR to INR");
+            System.out.println("7. Convert GBP to INR");
+            System.out.println("8. Convert JPY to INR");
+            System.out.println("9. Exit");
+            System.out.print("Choose an option: ");
+            int choice = sc.nextInt();
+
+            if (choice == 9) {
+                System.out.println("Exiting... Thank you!");
+                break;
+            }
+
+            double amount, result;
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter amount in INR: ");
+                    amount = sc.nextDouble();
+                    result = amount * usdRate;
+                    System.out.println("Amount in USD: " + result);
+                    break;
+                case 2:
+                    System.out.print("Enter amount in INR: ");
+                    amount = sc.nextDouble();
+                    result = amount * eurRate;
+                    System.out.println("Amount in EUR: " + result);
+                    break;
+                case 3:
+                    System.out.print("Enter amount in INR: ");
+                    amount = sc.nextDouble();
+                    result = amount * gbpRate;
+                    System.out.println("Amount in GBP: " + result);
+                    break;
+                case 4:
+                    System.out.print("Enter amount in INR: ");
+                    amount = sc.nextDouble();
+                    result = amount * jpyRate;
+                    System.out.println("Amount in JPY: " + result);
+                    break;
+                case 5:
+                    System.out.print("Enter amount in USD: ");
+                    amount = sc.nextDouble();
+                    result = amount / usdRate;
+                    System.out.println("Amount in INR: " + result);
+                    break;
+                case 6:
+                    System.out.print("Enter amount in EUR: ");
+                    amount = sc.nextDouble();
+                    result = amount / eurRate;
+                    System.out.println("Amount in INR: " + result);
+                    break;
+                case 7:
+                    System.out.print("Enter amount in GBP: ");
+                    amount = sc.nextDouble();
+                    result = amount / gbpRate;
+                    System.out.println("Amount in INR: " + result);
+                    break;
+                case 8:
+                    System.out.print("Enter amount in JPY: ");
+                    amount = sc.nextDouble();
+                    result = amount / jpyRate;
+                    System.out.println("Amount in INR: " + result);
+                    break;
+                default:
+                    System.out.println("Invalid choice! Try again.");
+            }
+        }
+
+        sc.close();
+    }
+}
+
